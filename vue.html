@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue project</title>
+    <script src="js/vue.js"></script>
+    <link rel="stylesheet" href="css/demo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div id="next">
+        <table>
+            <tr>
+                <td>name</td>
+                <td>age</td>
+                <td>sex</td>
+            </tr>
+            <tr v-for="item in nextData">
+                <td>{{item.name}}</td>
+                <td>{{item.age}}</td>
+                <td>{{item.sex}}</td>
+            </tr>
+        </table>
+    </div>
+    <div id="basic" class="basic">
+        <div class="basic-info">
+            <text class="basic-name"></text>
+            <text class="basic-hope"></text>
+            <div class="">
+
+            </div>
+        </div>
+        <div class="basic-img">
+
+        </div>
+    </div>
+</body>
+<script>
+
+    var nextData = {
+        newPerson: {
+
+        },
+        nextData: [
+            {
+                name: 'Jack',
+                age: 30,
+                sex: 'Male'
+            }, {
+                name: 'Bill',
+                age: 26,
+                sex: 'Male'
+            }, {
+                name: 'Tracy',
+                age: 22,
+                sex: 'Female'
+            }, {
+                name: 'Chris',
+                age: 36,
+                sex: 'Male'
+            }
+        ]
+    };
+
+
+    var next = new Vue ({
+        el: '#next',
+        data: nextData
+    })
+
+</script>
+</html>
